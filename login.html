@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Log in to Campfire Club.">
+    <title>Campfire Club | Log in</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/app.js" defer></script>
+  </head>
+  <body>
+    <!-- Меню записано в HTML. Класс active отмечает текущую страницу. -->
+    <header class="site-header">
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="../main.html">camp<span>fire</span></a>
+        <div class="nav-links">
+          <a href="../main.html">Register</a>
+          <a href="login.html" class="active" aria-current="page">Log in</a>
+          <a href="members.html">People</a>
+          <a href="blank.html">Quiet page</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-heading">
+        <p class="eyebrow">Member access</p>
+        <h1>Welcome back.</h1>
+        <p>Enter the email and password you used during registration.</p>
+      </section>
+      <section class="form-card" aria-labelledby="login-title">
+        <h2 id="login-title">Log in</h2>
+        <form id="login-form" data-login>
+          <div class="field">
+            <label for="login-email">Email</label>
+            <input id="login-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="login-password">Password</label>
+            <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+          </div>
+          <button class="primary-button" type="submit">Log in</button>
+          <p class="form-message" data-form-message role="status" hidden></p>
+        </form>
+        <p class="form-note">Do not have an account? <a href="../main.html">Register</a></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">Campfire Club &middot; Learn together, make things, stay curious.</div>
+    </footer>
+  </body>
+</html>

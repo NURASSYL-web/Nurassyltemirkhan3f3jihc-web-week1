@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create an account with Campfire Club.">
+    <title>Campfire Club | Registration</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/app.js" defer></script>
+  </head>
+  <body>
+    <!-- Меню записано в HTML. Класс active отмечает текущую страницу. -->
+    <header class="site-header">
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="main.html">camp<span>fire</span></a>
+        <div class="nav-links">
+          <a href="main.html" class="active" aria-current="page">Register</a>
+          <a href="pages/login.html">Log in</a>
+          <a href="pages/members.html">People</a>
+          <a href="pages/blank.html">Quiet page</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Campfire Club</p>
+          <h1>Join the Campfire Club.</h1>
+          <p class="intro">Create an account to join the community. Your data is saved only in this browser.</p>
+        </div>
+        <section class="form-card" aria-labelledby="register-title">
+          <p class="eyebrow">New member</p>
+          <h2 id="register-title">Registration</h2>
+          <!-- JavaScript находит эту форму по атрибуту data-registration. -->
+          <form id="registration-form" data-registration>
+            <div class="field">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" autocomplete="name" minlength="2" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="password">Password</label>
+              <input id="password" name="password" type="password" autocomplete="new-password" minlength="6" required>
+            </div>
+            <button class="primary-button" type="submit">Register</button>
+            <p class="form-message" data-form-message role="status" hidden></p>
+          </form>
+          <p class="form-note">Already registered? <a href="pages/login.html">Log in</a></p>
+        </section>
+      </section>
+
+      <section class="about-club" aria-labelledby="about-title" lang="ru">
+        <h2 id="about-title">Подробнее о нашем клубе</h2>
+        <p>Представьте вечер у костра: рядом сидят люди с разными историями, никто никуда не торопится, и у каждого есть возможность высказаться. Один рассказывает о недавно прочитанной книге, другой вспоминает путешествие, третий делится идеей будущего проекта. Именно такую атмосферу хочется сохранить в нашем клубе. Здесь важны внимание к собеседнику, интерес к его опыту и готовность спокойно обсуждать разные точки зрения. Даже самый обычный разговор иногда становится началом большого увлечения.</p>
+        <p>Начинать новое дело бывает непросто. Мы часто представляем готовый результат, сравниваем его со своей первой попыткой и расстраиваемся, когда они не совпадают. Но первая попытка нужна для знакомства с задачей. Она помогает увидеть, что уже понятно, а чему ещё предстоит научиться. Попробуйте разделить работу на несколько небольших этапов: определить цель, найти примеры, сделать простой вариант и проверить его. Такой подход позволяет двигаться вперёд без ощущения, что нужно решить всё одновременно.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">Campfire Club &middot; Learn together, make things, stay curious.</div>
+    </footer>
+
+    <!-- Окно открывается после успешного сохранения регистрации. -->
+    <dialog class="modal-backdrop" data-modal aria-labelledby="modal-title" aria-describedby="modal-description">
+      <section class="modal">
+        <button class="modal-close" type="button" aria-label="Close registration confirmation" data-close-modal autofocus>&times;</button>
+        <p class="eyebrow">Campfire Club</p>
+        <h2 id="modal-title">Registration successful!</h2>
+        <p id="modal-description">Your account is ready. Log in or meet the other members of the club.</p>
+        <div class="modal-actions">
+          <a class="primary-button" href="pages/login.html">Log in</a>
+          <a class="secondary-button" href="pages/members.html">View members</a>
+        </div>
+      </section>
+    </dialog>
+  </body>
+</html>

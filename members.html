@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the members of Campfire Club.">
+    <title>Campfire Club | People</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/app.js" defer></script>
+  </head>
+  <body>
+    <!-- Меню записано в HTML. Класс active отмечает текущую страницу. -->
+    <header class="site-header">
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="../main.html">camp<span>fire</span></a>
+        <div class="nav-links">
+          <a href="../main.html">Register</a>
+          <a href="login.html">Log in</a>
+          <a href="members.html" class="active" aria-current="page">People</a>
+          <a href="blank.html">Quiet page</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-heading">
+        <p class="eyebrow">Community roll</p>
+        <h1>People around the fire.</h1>
+        <p>Everyone registered in this browser appears here. New registrations appear automatically while this page is open.</p>
+        <p data-member-count aria-live="polite">0 registered members</p>
+      </section>
+      <section class="table-card" aria-label="Registered members">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Joined</th>
+            </tr>
+          </thead>
+          <!-- JavaScript добавляет сюда строки с пользователями. -->
+          <tbody id="members-body" data-members></tbody>
+          <tbody data-empty-members>
+            <tr>
+              <td class="empty-state" colspan="4">No registrations yet. Visit the Register page to add the first person.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Шаблон не отображается сам: JavaScript копирует его для каждого участника. -->
+        <template data-member-template>
+          <tr>
+            <td data-number></td>
+            <td data-name></td>
+            <td data-email></td>
+            <td data-joined></td>
+          </tr>
+        </template>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">Campfire Club &middot; Learn together, make things, stay curious.</div>
+    </footer>
+  </body>
+</html>
